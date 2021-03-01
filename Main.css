@@ -1,0 +1,40 @@
+span1 {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: large;
+}
+span2 {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: large;
+}
+span3 {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: large;
+}
+span4 {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: large;
+}
+span5 {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: large;
+}
+
+.myClass{
+    font-family: serif;
+    font-size: x-large;
+}
+#id{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+}
+body{
+    background-color: burlywood;
+    background-image: url("tree.jpg");
+    background-blend-mode:luminosity;
+}
