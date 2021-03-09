@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>My Simple Math Game</title>
+    <h1>My Simple Math Game</h1>
+        
+    <script>
+        var actualAnswer;
+        function printQuestion(){
+            var number1, number2;
+            for(var i = 0; 1 < 11; i++)
+            {
+                number1 = Math.floor(Math.random() * 10);
+                number2 = Math.floor(Math.random() * 10);   
+            }
+            //create a variable for number of correct answers
+            //create another variable for number of incorrect answers
+            //create a variable for total number of questions (this is the end)
+            //create a variable that says how many questions were performed
+            actualAnswer = number1 + number2;
+            document.getElementById("question").innerHTML = "What is "+ number1 + "+ " + number2 +"?";
+        }
+        function checkAnswer(){
+            var myAnswer = document.getElementById("answer").value;
+            if(myAnswer == actualAnswer) {
+                //increase the correct answer variable
+               document.getElementById("finalResult").innerHTML = "Good Job!";
+               document.getElementById("answer").value = "";
+               printQuestion(); //move this outside of the if statement
+            }
+            else {
+                //increase the incorrect answer variable
+                document.getElementById("finalResult").innerHTML = "Incorrect. Try Again.";
+            }
+            //increase the number of questions asked (the variable from above)
+            //if statement that checks if the questions asked variable is greater than the total number of questions
+            //print out the number of correct, the number of incorrect and the percentage - number of correct/total
+            //else
+            //printQuestion();
+        }
+    </script>
+</head>
+
+<body onload="printQuestion();">
+
+    <p></p>
+    &nbsp;
+    <div id="question"></div>
+    <br>
+    &nbsp;Your answer <input type="input" id="answer">
+    <br>
+    &nbsp; <button id="mySubmit" onclick="checkAnswer();">Submit</button>
+    <br>
+    &nbsp;
+    <div id="finalResult"></div>
+</body>
+
+</html>
