@@ -3,28 +3,61 @@
         <h1> Natalie Verploegen's Third Page</h1>
     </header>
     <br>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <body>
         Contact Us!
         <br>
         natalie.verplegen@umconnect.umt.edu
         <p> </p>
-        <form action="NextPage.html" type="Post">
-            Name: <input type="text" id="name"><br>
-            Email Address: <input type="text" id="eaname"><br>
-            <p> </p>
-            Do you agree to the listed terms?
+        <script>
+            function checkForm()
+            {
+                var name;
+                name = document.getElementById("txtName").value;
+                if(name == "")
+                {
+                    document.getElementById("txtName").style.backgroundColor = "red";
+                    document.getElementById("txtName").focus();
+                }
+                else{
+                    document.getElementById("txtName").style.backgroundColor = "white";
+                }
+                var txtEmail;
+                name = document.getElementById("txtEmail").value;
+                if(name == "")
+                {
+                    document.getElementById("txtEmail").style.backgroundColor = "red";
+                    document.getElementById("txtEmail").focus();
+                }
+                else{
+                    document.getElementById("txtEmail").style.backgroundColor = "white";
+                }
+                if(name == ""){
+                window.alert("Must fill all lines.");}
+                else{
+                window.alert("Thank you " + txtName);}
+            }
+        </script>
+        <table action="forthpage.html" type="Post">
+            <td>Name: <input type="text" id="txtName"></td>
+            <tr></tr>
+            <td>Email Address: <input type="text" id="txtEmail"></td>
+            <tr></tr>>
+            <td>Do you agree to the listed terms?
             <ol>
                 <li> Getting emails</li>
                 <li> Enjoyed the website</li>
             </ol>
-            <button id="Yes" type="Submit"> YES</button>
-            <button id="No" type="Submit"> NO</button>
-        </form>
+            </td>
+            <tr></tr>
+            <td><button a href="forthpage.html" class="btn btn-primary" onclick="checkForm();"> Submit </button></td>
+        </table>
     </body>
     <br>
     <body>
-        <a href="homepage.html"> Go To Home Page</a>
+        <a href="homepage.html" style="font-family: fantasy;"> Go To Home Page</a>
         <p> </p>
-        <a href="SecondPage.html"> Go To Second Page</a>
+        <a href="SecondPage.html" style="font-family: fantasy;"> Go To Second Page</a>
     </body>
 </html>
